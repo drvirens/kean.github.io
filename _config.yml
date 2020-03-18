@@ -21,7 +21,7 @@ lsi: true
 # Site specific
 # e.g. f7b08862-3571-4c61-a7a2-9a5f742fc10a
 featured_posts:
-  - c5358288-8c59-41e0-a790-521b52f89921
+  - fde52716-cfda-4437-bc3f-92327d46e295
 
 plugins:
   - jekyll-redirect-from
