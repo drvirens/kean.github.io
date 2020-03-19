@@ -74,6 +74,16 @@ public final class FetchImage: ObservableObject, Identifiable {
 }
 ```
 
+### Low Data Mode
+
+iOS 13 introduced a new [Low Data mode](https://support.apple.com/en-us/HT210596) and `FetchImage` offers a built-in support for it.
+
+```swift
+FetchImage(regularUrl: highQualityUrl, lowDataUrl: lowQualityUrl)
+```
+
+`FetchedImage.init(regularUrl:lowDataUrl:pipeline:)` is a convenience initializer that fetches the image with a regular URL with constrained network access disabled, and if the download fails because of the constrained network access, uses a low data URL instead. It also handles the scenarios like fetching a high quality image when unconstrained network access is restored.
+
 ## Usage
 
 Here is an example of using `FetchImage` in a custom SwiftUI view.
