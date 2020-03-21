@@ -121,6 +121,8 @@ struct ImageView_Previews: PreviewProvider {
 
 `FetchImage` gives you full control over how to manage the download and how to display the image. For example, one thing that you can do is to replace `onAppear` and `onDisappear` hooks to lower the priority of the requests instead of cancelling them. This might be useful if you want to continue loading and caching the images even if the user leaves the screen, but you still want the images the are currently on screen to be downloaded first.
 
+> Nuke supports resumable HTTP downloads, so as long as your server supports [HTTP range-requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests), you won't be losing any download progress when cancelling and restarting the requests. Resumable downloads are enabled by default.
+
 ```swift
 .onAppear {
     self.image.priority = .normal
