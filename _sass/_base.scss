@@ -102,7 +102,7 @@ aside {
     float: right !important; /* added to make toc scroll with page */
     top: 1 * $spacing-unit;
     right: 0;
-    width: 190px;
+    width: 180px;
     margin-right: -1 * 120px;
     margin-top: 1.5 * $spacing-unit;
 
@@ -202,7 +202,7 @@ strong code {
 }
 
 pre {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 18px;
     border-radius: 8px;
     background-color: var(--background-color-secondary);
@@ -222,9 +222,9 @@ pre {
     }
 
     > code {
-        font-size: 15px;
+        font-size: 14px;
         @include media-query($on-mobile) {
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: -0.5px;
         }
         padding-right: 0;
